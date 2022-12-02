@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 
-const input = readFileSync(__dirname + "/input.txt", "utf-8");
+const fileName = "inputs/2022/1.txt";
+const input = readFileSync(fileName, { encoding: "utf-8" });
 
 const calories = input
   .split("\n\n")
@@ -23,5 +24,4 @@ const max3 = Math.max(...calories);
 
 const total = max1 + max2 + max3;
 
-const init = (): void => console.log(total);
-export default init;
+export default (): void => console.log(total);
